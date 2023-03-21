@@ -24,7 +24,6 @@ void bootloader()
 nop //No Operation
 #endasm
 }
-//////////////////////////////////////////시간 설정 함수 부분////////////////////////////////////////////////
 void timer1_isr1()
 {
 if(count==200)
@@ -109,7 +108,6 @@ count=0;
 PORTD=0x80;
 setup_timer_1(T1_DISABLED);
 }
-//////////////////////////////////////////////타이머 인터럽트 부분//////////////////////////////////////////////
 #int_timer1
 void timer1_isr()
 {
@@ -152,7 +150,6 @@ else if(blue==0x09)
 timer1_isr9();
 }
 }
-///////////////////////////////////////////////외부 인트럽트 부분(스위치)/////////////////////////////////////////
 #int_ext
 void ext_isr()
 {
@@ -160,22 +157,21 @@ PORTD=0xff;
 setup_timer_1(T1_INTERNAL | T1_DIV_BY_2);
 set_timer1(53036);
 }
-//////////////////////////////////////////////////메인함수////////////////////////////////////////////////////
 void main()
 { 
 unsigned char time;
 TRISB=0x01;
 TRISD=0x00;
 PORTD=0x80;
-count=0; //카운트를 0으로 초기화
+count=0;
 //sec_count=0;
-ext_int_edge(H_TO_L); //외부인터럽트 사용선언(스위치 인가방법 선언)
-enable_interrupts(int_ext); //외부인터럽트 들어가는 함수(스위치 인가 시)
-enable_interrupts(INT_TIMER1); //타이머 인터럽트 들어가는 함수
-enable_interrupts(global); //밖으로 빠져나오는 함수
+ext_int_edge(H_TO_L); 
+enable_interrupts(int_ext);
+enable_interrupts(INT_TIMER1); 
+enable_interrupts(global);
  while(true)
  { 
-time = getc(); //어플을 통해 블루투스 값을 수신
+time = getc(); 
 getc();
 putc(time); 
 if(time=='a')
