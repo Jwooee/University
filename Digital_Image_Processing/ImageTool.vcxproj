@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{781C0D27-669E-4972-9615-54E0A92708F9}</ProjectGuid>
+    <RootNamespace>ImageTool</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddAvgImage.h" />
+    <ClInclude Include="AddAvgImageDlg.h" />
+    <ClInclude Include="AddConst.h" />
+    <ClInclude Include="AddConstDlg.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="DivConst.h" />
+    <ClInclude Include="DivConstDlg.h" />
+    <ClInclude Include="EedinDlg.h" />
+    <ClInclude Include="Endin.h" />
+    <ClInclude Include="Equalization.h" />
+    <ClInclude Include="FileNewDlg.h" />
+    <ClInclude Include="Filter.h" />
+    <ClInclude Include="FilterDlg.h" />
+    <ClInclude Include="Gamma.h" />
+    <ClInclude Include="GammaDlg.h" />
+    <ClInclude Include="GetHistogram.h" />
+    <ClInclude Include="GImage.h" />
+    <ClInclude Include="GImageDlg.h" />
+    <ClInclude Include="HistogramDlg.h" />
+    <ClInclude Include="ImageTool.h" />
+    <ClInclude Include="ImageToolDoc.h" />
+    <ClInclude Include="ImageToolSecChk.h" />
+    <ClInclude Include="ImageToolSecChkDlg.h" />
+    <ClInclude Include="ImageToolView.h" />
+    <ClInclude Include="InverseImage.h" />
+    <ClInclude Include="IppBitPlane.h" />
+    <ClInclude Include="IppFilter.h" />
+    <ClInclude Include="IppGeometry.h" />
+    <ClInclude Include="IppGeometryDlg.h" />
+    <ClInclude Include="IppImage\IppConvert.h" />
+    <ClInclude Include="IppImage\IppDib.h" />
+    <ClInclude Include="IppImage\IppImage.h" />
+    <ClInclude Include="IppImage\RGBBYTE.h" />
+    <ClInclude Include="IppResizeBilinear.h" />
+    <ClInclude Include="IppResizeNearest.h" />
+    <ClInclude Include="IppResizeNearestDlg.h" />
+    <ClInclude Include="Logic.h" />
+    <ClInclude Include="LogicDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Mirroring.h" />
+    <ClInclude Include="MirroringDlg.h" />
+    <ClInclude Include="MultiConst.h" />
+    <ClInclude Include="MultiConstDlg.h" />
+    <ClInclude Include="OutputWnd.h" />
+    <ClInclude Include="Prepare.h" />
+    <ClInclude Include="PrepareDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RightLeft.h" />
+    <ClInclude Include="RLUD.h" />
+    <ClInclude Include="Rotation.h" />
+    <ClInclude Include="RotationDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Stretching.h" />
+    <ClInclude Include="SubConst.h" />
+    <ClInclude Include="SubConstDlg.h" />
+    <ClInclude Include="SubDifImage.h" />
+    <ClInclude Include="SubDifImageDlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Updown.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddAvgImage.cpp" />
+    <ClCompile Include="AddAvgImageDlg.cpp" />
+    <ClCompile Include="AddConst.cpp" />
+    <ClCompile Include="AddConstDlg.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="DivConst.cpp" />
+    <ClCompile Include="DivConstDlg.cpp" />
+    <ClCompile Include="EedinDlg.cpp" />
+    <ClCompile Include="Endin.cpp" />
+    <ClCompile Include="Equalization.cpp" />
+    <ClCompile Include="FileNewDlg.cpp" />
+    <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="FilterDlg.cpp" />
+    <ClCompile Include="Gamma.cpp" />
+    <ClCompile Include="GammaDlg.cpp" />
+    <ClCompile Include="GetHistogram.cpp" />
+    <ClCompile Include="GImage.cpp" />
+    <ClCompile Include="GImageDlg.cpp" />
+    <ClCompile Include="HistogramDlg.cpp" />
+    <ClCompile Include="ImageTool.cpp" />
+    <ClCompile Include="ImageToolDoc.cpp" />
+    <ClCompile Include="ImageToolSecChk.cpp" />
+    <ClCompile Include="ImageToolSecChkDlg.cpp" />
+    <ClCompile Include="ImageToolView.cpp" />
+    <ClCompile Include="InverseImage.cpp" />
+    <ClCompile Include="IppBitPlane.cpp" />
+    <ClCompile Include="IppFilter.cpp" />
+    <ClCompile Include="IppGeometry.cpp" />
+    <ClCompile Include="IppGeometryDlg.cpp" />
+    <ClCompile Include="IppImage\IppConvert.cpp" />
+    <ClCompile Include="IppImage\IppDib.cpp" />
+    <ClCompile Include="IppResizeBilinear.cpp" />
+    <ClCompile Include="IppResizeNearest.cpp" />
+    <ClCompile Include="IppResizeNearestDlg.cpp" />
+    <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="LogicDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Mirroring.cpp" />
+    <ClCompile Include="MirroringDlg.cpp" />
+    <ClCompile Include="MultiConst.cpp" />
+    <ClCompile Include="MultiConstDlg.cpp" />
+    <ClCompile Include="OutputWnd.cpp" />
+    <ClCompile Include="Prepare.cpp" />
+    <ClCompile Include="PrepareDlg.cpp" />
+    <ClCompile Include="RightLeft.cpp" />
+    <ClCompile Include="RLUD.cpp" />
+    <ClCompile Include="Rotation.cpp" />
+    <ClCompile Include="RotationDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Stretching.cpp" />
+    <ClCompile Include="SubConst.cpp" />
+    <ClCompile Include="SubConstDlg.cpp" />
+    <ClCompile Include="SubDifImage.cpp" />
+    <ClCompile Include="SubDifImageDlg.cpp" />
+    <ClCompile Include="Updown.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageTool.reg" />
+    <None Include="res\ImageTool.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ImageTool.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ImageTool.ico" />
+    <Image Include="res\ImageToolDoc.ico" />
+    <Image Include="res\output_wnd.ico" />
+    <Image Include="res\output_wnd_hc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="UserImages.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ImageTool.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
